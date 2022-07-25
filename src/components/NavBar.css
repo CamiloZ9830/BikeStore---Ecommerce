@@ -1,0 +1,48 @@
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #8338ec;
+    color: #fff;
+    padding: 5px 15px;
+    margin-bottom: 50px;
+    
+}
+.navbar a {
+    text-decoration: none;
+    color: #fff;
+    
+}
+.paginas {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+ 
+.links_Pag {
+   
+    padding-right: 30px;
+   
+}
+.carrito {
+    position: relative;
+    margin: 12px;
+    background-color: #fb5607;
+    color: #2b2d42;
+    font-size: 30px;
+    padding: 5px;
+    border-radius: 4px;
+    
+}
+.cantidad_Prod {
+    position: absolute;
+    top: -12px;
+    right: -11px;
+    font-size: 19px;
+    background-color:#ff006e;
+    color: #fff;
+    padding: 0px 4px;
+    border-radius: 3px;
+    
+}
