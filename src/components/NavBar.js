@@ -1,5 +1,17 @@
 import './NavBar.css';
 
+function CartWidget () {
+    return(
+<a href="#0">
+       <div className="carrito">
+        <i className="bi bi-cart3"></i> 
+        <div id="cantidad_Prod" className="cantidad_Prod">0</div> 
+       </div></a>
+   
+   )
+}
+
+
 function NavBar() {
 return (
     <div className="navbar">
@@ -10,12 +22,9 @@ return (
         <div><a className="links_Pag"href="#2">Electra Bikes</a></div>
         <div><a className="links_Pag" href="#3"target="_blank">Tienda Oficial</a></div>
     </div>
-    <a href="#0">
-       <div className="carrito">
-        <i className="bi bi-cart3"></i> 
-        <div id="cantidad_Prod" className="cantidad_Prod">0</div> 
-       </div></a>
-   </div>
+   < CartWidget/>
+    </div>
+    
 )
 }
 
