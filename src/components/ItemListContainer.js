@@ -1,4 +1,5 @@
-import './NavBar.css';
+import './Styles.css';
+import ItemCount from './ItemCount';
 
 
 const bike =  { 
@@ -37,10 +38,11 @@ function Producto(props) {
                   <p><b>Modelo:</b>{modelo}</p>
                <div className="precio-cantidad">
                  <h3>${precio}</h3>
-                 <div className="buttons">
-                 </div>
+                 <ItemCount stock={5}/>
                </div>
-               </div>    
+               </div>
+               <button className="btn btn-outline-success">Agregar al Carrito</button>
+                      
             </div>
           </div>
         </div>);
