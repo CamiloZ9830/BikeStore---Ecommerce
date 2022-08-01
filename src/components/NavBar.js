@@ -1,6 +1,6 @@
 import './NavBar.css';
 
-function CartWidget () {
+function CartWidget() {
     return(
 <a href="#0">
        <div className="carrito">

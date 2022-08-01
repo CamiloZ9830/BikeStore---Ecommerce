@@ -46,3 +46,49 @@
     border-radius: 3px;
     
 }
+
+
+.item {
+    border: 2px solid #2b2d42;
+    border-radius: 4px;
+    
+}
+.item img {
+    width: 100%;
+    border-radius: 2px 2px 0 0;
+  }
+
+.descripcion-Item{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    
+}
+
+.precio-cantidad{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.buttons{
+    display: flex;
+    gap: 8px;
+
+}
+
+.flexContent {
+    display: flex;
+    justify-content:space-evenly;
+    background-color: #fff;
+}
+    
+
+.shop {
+    display: grid;
+    grid-template-columns: repeat(4, 220px);
+    gap: 20px;
+    max-height: 600px;
+    overflow: hidden scroll;
+}
