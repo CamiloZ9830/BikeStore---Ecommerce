@@ -18,9 +18,9 @@ function ItemListContainer({nombre, descripcion, modelo, precio, img} ) {
                <div className="precio-cantidad">
                  <h3>${precio}</h3>
                  <div className="buttons">
-                 
+                 <ItemCount initial={8} stock={15}/>
                 
-               </div>
+                 </div>
                </div>
                
                </div>

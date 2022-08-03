@@ -2,8 +2,8 @@ import './Styles.css';
 import React, {useState} from 'react';
 
 
-function ItemCount(props) {
-    const [cantidad, setCantidad] = useState(1);
+function ItemCount({initial, stock}) {
+    const [cantidad, setCantidad] = useState(initial);
 
 
 
@@ -12,7 +12,7 @@ function ItemCount(props) {
    let itemIncremento = () => {
         
    
-      if(cantidad < props.stock) {
+      if(cantidad < stock) {
         setCantidad(prevCount => prevCount + 1);
       }
       else {
@@ -22,7 +22,7 @@ function ItemCount(props) {
 };
 
     let itemDecremento = () => {
-        if (cantidad > 1){
+        if (cantidad > initial){
             setCantidad(prevCount => prevCount - 1);
         }
        
