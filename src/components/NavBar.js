@@ -1,5 +1,5 @@
 import './Styles.css';
-import CartWidget from './CartWidget'
+import CartWidget from './CartWidget';
 
 
 
@@ -19,4 +19,4 @@ return (
 )
 }
 
-export default NavBar;
+export default NavBar

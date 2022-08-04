@@ -49,6 +49,7 @@
 
 
 .item {
+   
     border: 2px solid #2b2d42;
     border-radius: 4px;
     
@@ -78,6 +79,12 @@
     gap: 8px;
 
 }
+.btn-center{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    
+}
 .bi-dash-circle{
     color: red;
     cursor: pointer;
@@ -99,6 +106,6 @@
     display: grid;
     grid-template-columns: repeat(4, 220px);
     gap: 20px;
-    max-height: 600px;
-    overflow: hidden scroll;
+    justify-content: center;
+  
 }
