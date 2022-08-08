@@ -1,6 +1,6 @@
 let storeItemsData = [
     {
-        id: "BC_Trek", 
+        id: "BC_101", 
         nombre: "Bicicleta Trek", 
         descripcion: "Trek Urbana para amantes de bicicletas", 
         modelo: "2020", 
@@ -8,7 +8,7 @@ let storeItemsData = [
         img: require("../imagenes/imagen1.jpg"),
     },
     {
-        id: "BC_Elec", 
+        id: "BE_101", 
         nombre: "Electra Bike", 
         descripcion: "Electra Bike para amantes de bicicletas", 
         modelo: "2022", 
@@ -17,7 +17,7 @@ let storeItemsData = [
     
     },
     {
-        id: "RP_Llanta", 
+        id: "RP_101", 
         nombre: "Llanta de respuesto", 
         descripcion: "Llanta de respuesto bicicleta Trek", 
         modelo: "", 
@@ -25,7 +25,7 @@ let storeItemsData = [
         img: require("../imagenes/imagen3.jpg"),
     },
     {
-        id: "EQ_LUZLED", 
+        id: "EQ_101", 
         nombre: "Luz Led", 
         descripcion: "Luz Led exploradora para Bicicleta", 
         modelo: "", 
@@ -38,7 +38,7 @@ let storeItemsData = [
         descripcion: "Cannondale Urbana para amantes de bicicletas", 
         modelo: "2021", 
         precio: 600, 
-        img: require("../imagenes/imagen6.jpg")
+        img: require("../imagenes/imagen1.jpg")
     },
     {
         id: "BC_103", 

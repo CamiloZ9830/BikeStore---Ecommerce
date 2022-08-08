@@ -11,7 +11,7 @@ return (
         <div><a className="links_Pag" href="#0">Equipo y Repuestos</a></div>
         <div><a className="links_Pag" href="#1">Bicicletas</a></div>
         <div><a className="links_Pag"href="#2">Electra Bikes</a></div>
-        <div><a className="links_Pag" href="#3"target="_blank">Tienda Oficial</a></div>
+        <div><a className="links_Pag" href="#3">Tienda Oficial</a></div>
     </div>
    < CartWidget/>
     </div>

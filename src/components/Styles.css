@@ -52,8 +52,10 @@
    
     border: 2px solid #2b2d42;
     border-radius: 4px;
+    cursor: pointer;
     
 }
+
 .item img {
     width: 100%;
     border-radius: 2px 2px 0 0;
@@ -107,5 +109,6 @@
     grid-template-columns: repeat(4, 220px);
     gap: 20px;
     justify-content: center;
+    margin-bottom: 100px;
   
 }

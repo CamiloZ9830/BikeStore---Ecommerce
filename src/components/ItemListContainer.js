@@ -8,7 +8,7 @@ let getItems = () =>{
       setTimeout(() => resolve(storeItemsData),2000);
     })
   };
-
+  
  function ItemListContainer() {
       
     
@@ -23,7 +23,9 @@ let getItems = () =>{
      },
        []
  );
-  
+
+
+ 
     return (
       
 
@@ -36,7 +38,7 @@ let getItems = () =>{
            
 }; 
 
- export default ItemListContainer
+ export default ItemListContainer 
 
 
  
