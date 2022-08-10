@@ -1,32 +1,46 @@
 import '../Styles.css';
 import ItemDetail from './ItemDetail'
 import React, {useState, useEffect} from 'react';
-import storeItemsData from '../../data/data';
+import { getItems } from '../../helpers/helpers';
+import {useParams} from 'react-router-dom'
+import FadeLoader from "react-spinners/FadeLoader";
 
-let getItems = () =>{
-    return new Promise((resolve) => {
-      setTimeout(() => resolve(storeItemsData),2000);
-    })
-  };
+const override = {
+  display: "block",
+  margin: "0 auto",
+};
 
 
 function ItemDetailContainer() {
-    
+    const {Id} = useParams();
     const [details, setDetails] = useState([]);
+    const [loader, setLoader] = useState(false)
      
     useEffect(() => {
-      getItems().then(
+      setLoader(true)
+      getItems(Id).then(
         (Item) => {
-          setDetails(Item[0]);
+          setLoader(false)
+          setDetails(Item);
         });
-    },[]);
+    },[Id]);
+    
+    
    
- 
-     return (
-        <ItemDetail item={details}/>
-    );
+       return ( <>
+                {loader  ? 
+                 <FadeLoader 
+                   size={150}
+                   color={'#123abc'}
+                   loading={loader}
+                   cssOverride={override}/>
+              
+                : 
+                 
+                 <ItemDetail details={details}/>}
+                </>
+);
 };
-
 
 
 
