@@ -1,13 +1,9 @@
 import './Styles.css';
 import ItemList from './ItemList';
 import React, {useState, useEffect} from 'react';
-import storeItemsData from '../data/data';
+import {getItems} from '../helpers/helpers';
 
-let getItems = () =>{
-    return new Promise((resolve) => {
-      setTimeout(() => resolve(storeItemsData),2000);
-    })
-  };
+
   
  function ItemListContainer() {
       
