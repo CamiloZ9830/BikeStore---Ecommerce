@@ -140,3 +140,16 @@ body {
     display: flex;
     justify-content: center;
 }
+.center {
+    display: block;
+    margin: 0 auto 50px;
+}
+
+.center-cart-div{
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+}

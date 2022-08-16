@@ -1,12 +1,25 @@
 import './Styles.css';
+import {Link} from 'react-router-dom'
+import { useContext } from 'react';
+import { CartContext } from '../context/cartContext';
 
 function CartWidget() {
+     
+    const {items} = useContext(CartContext)
+     let cantidadTotal = items.map((articulo) =>  articulo.cantidad).reduce((value1, value2) => value1 + value2, 0)
+     
+    
     return(
-<a href="#0">
+<Link to='/cart'>
        <div className="carrito">
         <i className="bi bi-cart3"></i> 
-        <div id="cantidad_Prod" className="cantidad_Prod">0</div> 
-       </div></a>
+        {cantidadTotal >= 1 ?
+        <div  className="cantidad_Prod">{cantidadTotal}</div> 
+        :
+        null
+        }
+        
+       </div></Link>
    
    )
 }

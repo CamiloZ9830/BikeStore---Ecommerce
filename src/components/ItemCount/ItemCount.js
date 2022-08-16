@@ -2,7 +2,7 @@ import '../Styles.css';
 import React, {useState} from 'react';
 
 
-function ItemCount({initial, stock, onAdd}) {
+function ItemCount({item, initial, stock, add}) {
     const [cantidad, setCantidad] = useState(initial);
 
 
@@ -35,7 +35,7 @@ function ItemCount({initial, stock, onAdd}) {
                 <div  className="cantidad">{cantidad}</div>
                 <i onClick={() => itemIncremento()}className="bi bi-plus-circle"></i>
                 <div >
-                       <button className="btn btn-outline-success" onClick={() => onAdd()} >Agregar al Carrito</button>
+                       <button className="btn btn-outline-success" onClick={() => add(item, cantidad)}>Agregar al Carrito</button>
                     </div>
                     
             </div>
