@@ -10,8 +10,9 @@ const {nombre, descripcion, modelo, precio, img} = details || {};
 
 const [add, setAdd] = useState(false);
 
-const onAdd = () => {
+const onAdd = (cantidad) => {
        setAdd(!add)
+       alert(`Agregaste ${cantidad} productos a la canasta`)
 };
      
      return (
@@ -25,7 +26,7 @@ const onAdd = () => {
                       <div className="precio-cantidad">
                           <h3>${precio}</h3>
                           <div className="buttons">
-                            {  add ? <p>Producto agregado!</p> : <ItemCount initial={1} stock={6} onAdd={onAdd}/>}
+                            {  add ? <p>Producto agregado!</p> : <ItemCount initial={1} stock={6} add={onAdd}/>}
                             
                           </div>
                       </div>

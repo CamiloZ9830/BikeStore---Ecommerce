@@ -5,7 +5,7 @@ export const getItems = (itemId) =>{
   
     return  new Promise((resolve, reject) => {
 
-         setTimeout(() => {if(storeItemsData !== "" || undefined || null) {if(itemId) {resolve(storeItemsData.find((item) => item.id === itemId))}
+         setTimeout(() => {if(storeItemsData) {if(itemId) {resolve(storeItemsData.find((item) => item.id === itemId))}
          else {resolve(storeItemsData);}
         
           }
