@@ -1,7 +1,11 @@
 import '../Styles.css';
 import ItemDetail from './ItemDetail'
 import React, {useState, useEffect} from 'react';
-<<<<<<< HEAD
+
+import { getItems } from '../../helpers/helpers';
+import {useParams} from 'react-router-dom'
+import FadeLoader from "react-spinners/FadeLoader";
+
 import {getItems} from '../../helpers/helpers';
 
 
@@ -13,10 +17,6 @@ function ItemDetailContainer() {
   
   useEffect(() => {
     getItems().then(
-=======
-import { getItems } from '../../helpers/helpers';
-import {useParams} from 'react-router-dom'
-import FadeLoader from "react-spinners/FadeLoader";
 
 const override = {
   display: "block",
@@ -32,7 +32,7 @@ function ItemDetailContainer() {
     useEffect(() => {
       setLoader(true)
       getItems(Id).then(
->>>>>>> newcommit
+
         (Item) => {
           setLoader(false)
           setDetails(Item);

@@ -1,0 +1,84 @@
+[33mcommit 4e5c3830e34ab3bdce3a29d7d9d3c4bcc2d9031a[m[33m ([m[1;36mHEAD -> [m[1;32maltbranch[m[33m)[m
+Merge: db12e0d 95783af
+Author: Juan Zora <camilozora@hotmail.com>
+Date:   Wed Aug 17 11:01:43 2022 -0500
+
+    sincronizar counter 2
+
+[33mcommit 95783af45a5d87cdde80f5ef5a1a6034bbdadf15[m[33m ([m[1;32mnewcommit[m[33m)[m
+Author: Juan Zora <camilozora@hotmail.com>
+Date:   Wed Aug 17 10:57:13 2022 -0500
+
+    sincornizar counter 2
+
+[33mcommit c3891568e250b2f14a1566902a879232b060ec83[m
+Author: Juan Zora <camilozora@hotmail.com>
+Date:   Sun Aug 14 13:56:40 2022 -0500
+
+    sincronizar counter
+
+[33mcommit 2823521f5c01321c4c6655f6672a4138df88bd42[m
+Author: Juan Zora <camilozora@hotmail.com>
+Date:   Tue Aug 9 21:10:12 2022 -0500
+
+    PPF
+
+[33mcommit db12e0dc053fbfdd1a283d35816790840ec4ae90[m[33m ([m[1;31morigin/altbranch[m[33m)[m
+Author: Juan Zora <camilozora@hotmail.com>
+Date:   Wed Aug 10 18:45:01 2022 -0500
+
+    Detalle Producto 2...
+
+[33mcommit f778e254a9ab1877c70cbc871e3d4b948458be4c[m
+Author: Juan Zora <camilozora@hotmail.com>
+Date:   Mon Aug 8 10:44:59 2022 -0500
+
+    Detalle del Producto
+
+[33mcommit a65beef488529d503ead6f8ae3a27550aecd8bcc[m
+Author: Juan Zora <camilozora@hotmail.com>
+Date:   Thu Aug 4 11:20:20 2022 -0500
+
+    Catalogo con Map y Promises
+
+[33mcommit bd70433298411af15ff1da0155dc9e6dc63a45b9[m
+Author: Juan Zora <camilozora@hotmail.com>
+Date:   Tue Aug 2 20:28:48 2022 -0500
+
+    agregado el componente ItemCount 2
+
+[33mcommit de20fbbac5aac5a7eec227282c31d733497dbe69[m
+Author: Juan Zora <camilozora@hotmail.com>
+Date:   Tue Aug 2 13:06:16 2022 -0500
+
+    agregando CartWidget y ItemListContainer 2
+
+[33mcommit dc91d692b6e948d4f91ec6d92315c936ceee0696[m
+Author: Juan Zora <camilozora@hotmail.com>
+Date:   Mon Aug 1 11:33:09 2022 -0500
+
+    agregado el componente ItemCount
+
+[33mcommit fa3ef69f08e795413a977c72e3dc54a90136587c[m
+Author: Juan Zora <camilozora@hotmail.com>
+Date:   Sun Jul 31 20:06:42 2022 -0500
+
+    agregando CartWidget y ItemListContainer
+
+[33mcommit d43f2515e44184980ceff14d8a569e304bed97a5[m
+Author: Juan Zora <camilozora@hotmail.com>
+Date:   Tue Jul 26 18:28:47 2022 -0500
+
+    Componente NavBar 2
+
+[33mcommit b81bbf5005c4d43d50523d35f799bfcf9802e81f[m
+Author: Juan Zora <camilozora@hotmail.com>
+Date:   Mon Jul 25 09:49:43 2022 -0500
+
+    nuevo componente NavBar
+
+[33mcommit 48777641ea40ea7f9df8f760060ee39a526d48f4[m
+Author: Juan Zora <camilozora@hotmail.com>
+Date:   Mon Jul 18 00:53:29 2022 -0500
+
+    Initialize project using Create React App

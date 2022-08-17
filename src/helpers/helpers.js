@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+comm
 import storeItemsData from "../data/data";
 
 
@@ -12,7 +12,7 @@ export let getItems = () =>{
   };
 
 
-=======
+
 import storeItemsData from '../data/data';
 
 
@@ -29,4 +29,4 @@ export const getItems = (itemId) =>{
 }
 );
 };
->>>>>>> newcommit
+
