@@ -1,6 +1,7 @@
 import '../Styles.css';
 import ItemDetail from './ItemDetail'
 import React, {useState, useEffect} from 'react';
+<<<<<<< HEAD
 import {getItems} from '../../helpers/helpers';
 
 
@@ -12,17 +13,48 @@ function ItemDetailContainer() {
   
   useEffect(() => {
     getItems().then(
-        (Item) => {
-          setDetails(Item[0]);
-        });
-    },[]);
-   
- 
-     return (
-        <ItemDetail item={details}/>
-    );
+=======
+import { getItems } from '../../helpers/helpers';
+import {useParams} from 'react-router-dom'
+import FadeLoader from "react-spinners/FadeLoader";
+
+const override = {
+  display: "block",
+  margin: "0 auto",
 };
 
+
+function ItemDetailContainer() {
+    const {Id} = useParams();
+    const [details, setDetails] = useState([]);
+    const [loader, setLoader] = useState(false)
+     
+    useEffect(() => {
+      setLoader(true)
+      getItems(Id).then(
+>>>>>>> newcommit
+        (Item) => {
+          setLoader(false)
+          setDetails(Item);
+        });
+    },[Id]);
+    
+    
+   
+       return ( <>
+                {loader  ? 
+                 <FadeLoader 
+                   size={150}
+                   color={'#123abc'}
+                   loading={loader}
+                   cssOverride={override}/>
+              
+                : 
+                 
+                 <ItemDetail details={details}/>}
+                </>
+);
+};
 
 
 

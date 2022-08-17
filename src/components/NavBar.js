@@ -1,22 +1,28 @@
 import './Styles.css';
 import CartWidget from './CartWidget';
-
+import {Link,NavLink,Outlet} from 'react-router-dom';
 
 
 function NavBar() {
 return (
+     <>
     <div className="navbar">
-    <a href="index.html"><h2>Bike Store</h2></a>
-    <div className = 'paginas'> 
-        <div><a className="links_Pag" href="#0">Equipo y Repuestos</a></div>
-        <div><a className="links_Pag" href="#1">Bicicletas</a></div>
-        <div><a className="links_Pag"href="#2">Electra Bikes</a></div>
-        <div><a className="links_Pag" href="#3">Tienda Oficial</a></div>
+       <Link to='/'><h2>Bike Store</h2></Link>
+         <div className = 'paginas'> 
+              <div><NavLink style={({isActive}) => 
+                isActive ? {color: 'purple'} : {color:'white'}} to={`/category/${'ER'}`} className="links_Pag">Equipo y Repuestos</NavLink></div>
+              <div><NavLink style={({isActive}) => 
+                isActive ? {color: 'purple'} : {color:'white'}} to={`/category/${'BC'}`} className="links_Pag">Bicicletas</NavLink></div>
+              <div><NavLink style={({isActive}) => 
+                isActive ? {color: 'purple'} : {color:'white'}} to={`/category/${'BE'}`} className="links_Pag">Electra Bikes</NavLink></div>
+              <div><Link  to='Wip' className="links_Pag" >Tienda Oficial</Link></div>
+         </div>
+         < CartWidget/>
+         
     </div>
-   < CartWidget/>
-    </div>
-    
+    <Outlet/>
+    </>
 )
-}
+};
 
 export default NavBar

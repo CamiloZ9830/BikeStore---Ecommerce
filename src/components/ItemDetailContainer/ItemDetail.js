@@ -1,10 +1,22 @@
 import '../Styles.css';
-import ItemCount from '../ItemCount';
+import ItemCount from '../ItemCount/ItemCount';
+import React, {useState} from 'react'; 
+import {Link} from 'react-router-dom'
 
 
-function ItemDetail ({item:{nombre, descripcion, modelo, precio, img,id}}) {
-    return (
-        <div className="shop">
+function ItemDetail ({details}) {
+      
+const {nombre, descripcion, modelo, precio, img} = details || {};
+
+const [add, setAdd] = useState(false);
+
+const onAdd = (cantidad) => {
+       setAdd(!add)
+       alert(`Agregaste ${cantidad} productos a la canasta`)
+};
+     
+     return (
+               <div className='detail-frame'>
                <div className="item" >
                     <img src={img} alt="Producto"/>
                     <div className="descripcion-Item">
@@ -14,13 +26,15 @@ function ItemDetail ({item:{nombre, descripcion, modelo, precio, img,id}}) {
                       <div className="precio-cantidad">
                           <h3>${precio}</h3>
                           <div className="buttons">
-                            <ItemCount initial={1} stock={6}/>
+                            {  add ? <p>Producto agregado!</p> : <ItemCount initial={1} stock={6} add={onAdd}/>}
+                            
                           </div>
                       </div>
+                      <Link to={'/cart'}><div>
+                       <button className="btn btn-outline-success">Finalizar compra</button>
+                    </div></Link>
                     </div>
-                    <div className='btn-center'>
-                       <button className="btn btn-outline-success">Agregar al Carrito</button>
-                    </div>
+                    
               </div>
               </div>
     );

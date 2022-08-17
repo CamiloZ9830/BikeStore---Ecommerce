@@ -5,7 +5,7 @@ let storeItemsData = [
         descripcion: "Trek Urbana para amantes de bicicletas", 
         modelo: "2020", 
         precio: 500, 
-        img: require("../imagenes/imagen1.jpg"),
+        img: require("../imagenes/imagen1.jpg")
     },
     {
         id: "BE_101", 
@@ -13,24 +13,24 @@ let storeItemsData = [
         descripcion: "Electra Bike para amantes de bicicletas", 
         modelo: "2022", 
         precio: 800, 
-        img: require("../imagenes/imagen2.jpg"),
+        img: require("../imagenes/imagen2.jpg")
     
     },
     {
-        id: "RP_101", 
+        id: "ER_101", 
         nombre: "Llanta de respuesto", 
         descripcion: "Llanta de respuesto bicicleta Trek", 
         modelo: "", 
         precio: 60, 
-        img: require("../imagenes/imagen3.jpg"),
+        img: require("../imagenes/imagen3.jpg")
     },
     {
-        id: "EQ_101", 
+        id: "ER_102", 
         nombre: "Luz Led", 
         descripcion: "Luz Led exploradora para Bicicleta", 
         modelo: "", 
         precio: 45, 
-        img: require("../imagenes/imagen4.jpg"),
+        img: require("../imagenes/imagen4.jpg")
     },
     {
         id: "BC_102", 
@@ -58,7 +58,7 @@ let storeItemsData = [
     
     },
     {
-        id: "EQ_102", 
+        id: "ER_103", 
         nombre: "Casco", 
         descripcion: "Casco para Bicicleta", 
         modelo: "", 

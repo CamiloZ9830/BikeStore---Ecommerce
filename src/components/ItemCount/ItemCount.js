@@ -1,8 +1,8 @@
-import './Styles.css';
+import '../Styles.css';
 import React, {useState} from 'react';
 
 
-function ItemCount({initial, stock}) {
+function ItemCount({initial, stock, add}) {
     const [cantidad, setCantidad] = useState(initial);
 
 
@@ -29,11 +29,19 @@ function ItemCount({initial, stock}) {
     }
 
     return (
+        <div>
             <div className="buttons">
-                <i onClick={itemDecremento} className="bi bi-dash-circle"></i> 
+                <i onClick={() => itemDecremento()} className="bi bi-dash-circle"></i> 
                 <div  className="cantidad">{cantidad}</div>
-                <i onClick={itemIncremento}className="bi bi-plus-circle"></i>
+                <i onClick={() => itemIncremento()}className="bi bi-plus-circle"></i>
+                <div >
+                       <button className="btn btn-outline-success" onClick={() => add(cantidad)} >Agregar al Carrito</button>
+                    </div>
+                    
             </div>
+            
+        </div>
+            
     );
 
 

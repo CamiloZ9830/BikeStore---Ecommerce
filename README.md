@@ -1,6 +1,17 @@
+# React App - Proyecto BikeStore - Juan Zora
+
+Esta es una Ecommerce ReactApp de pagina unica.
+
+BikeStore es una tienda de bicicletas con una direccion fisica que aspira a ofrecer sus productos de forma online a traves de la app en desarrollo BikeStore. 
+
+# Librerias Externa 
+
+Librerias Externas como Bootstrap para estilos del NavBar y ItemCount, tambien uso de ReactSpinners que se renderiza cuando el async mock no esta listo, y simulan la carga de los datos.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
 
 ## Available Scripts
 
