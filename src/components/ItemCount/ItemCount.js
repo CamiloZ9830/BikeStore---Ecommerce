@@ -1,8 +1,13 @@
 import '../Styles.css';
-import React, {useState} from 'react';
+import React, {useState, useContext} from 'react';
+import {CartContext} from '../../context/cartContext'
 
 
-function ItemCount({item, initial, stock, add}) {
+function ItemCount({item, initial, stock, onAdd}) {
+  
+       
+    const {addItem} = useContext(CartContext);
+
     const [cantidad, setCantidad] = useState(initial);
 
 
@@ -35,7 +40,7 @@ function ItemCount({item, initial, stock, add}) {
                 <div  className="cantidad">{cantidad}</div>
                 <i onClick={() => itemIncremento()}className="bi bi-plus-circle"></i>
                 <div >
-                       <button className="btn btn-outline-success" onClick={() => add(item, cantidad)}>Agregar al Carrito</button>
+                       <button className="btn btn-outline-success" onClick={() => [addItem(item,cantidad), onAdd(cantidad)] }>Agregar al Carrito</button>
                     </div>
                     
             </div>

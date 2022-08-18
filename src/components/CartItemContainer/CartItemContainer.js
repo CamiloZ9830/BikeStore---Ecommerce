@@ -1,12 +1,19 @@
 import React, {useContext} from "react";
 import {CartContext} from '../../context/cartContext'
-import ItemCount from "../ItemCount/ItemCount";
+
 import {Link} from 'react-router-dom'
 
 
 
 function CartItemContainer() {
-     const {items, addItem, removeItem, removeAll} = useContext(CartContext);
+     const {items, removeItem, removeAll} = useContext(CartContext);
+     
+    const valorTotalItem = items.map((articulo) => {
+      const {cantidad, precio} = articulo;
+      return precio * cantidad
+       
+     })
+     const valorTotal = valorTotalItem.reduce((value1, value2) => value1 + value2, 0 )
       console.log(items);
      return (
       <>  
@@ -14,29 +21,29 @@ function CartItemContainer() {
       
       :
       
-      <button className="btn btn-outline-danger center" onClick={() => removeAll()}>Remover todos los productos</button> }
+     <> <button className="btn btn-outline-danger center" onClick={() => removeAll()}>Remover todos los productos</button> 
+      <h2 className="center-cart-div">{`Total $ ${valorTotal}`}</h2> </>}
       
         
         <div className="shop">
         
          {items.map((item) => {
 
-            const {nombre, descripcion, modelo, precio, img, id} = item;
+            const {nombre, descripcion, modelo, precio, img, id, cantidad} = item;
                  
          return (
             <div className="item"  key={id}>
-                    <i className="bi bi-x" onClick={() => removeItem(id)}></i>
+                    <i style={{background: 'red', color:'white', borderRadius: '5px'}} className="bi bi-x" onClick={() => removeItem(id)}></i>
                     <img src={img} alt="Producto"/>
                     <div className="descripcion-Item">
                        <h3>{nombre}</h3>
                        <p>{descripcion}</p>
                        <p><b>Modelo:</b>{modelo}</p>
+                       <p><b>Cantidad:</b>{cantidad}</p>
+                       <p><b>x</b>{cantidad * precio}</p>
                       <div className="precio-cantidad">
                           <h3>${precio}</h3>
-                          <div className="buttons">
-                             <ItemCount initial={1} stock={6} item={item} add={addItem} />
-                            
-                          </div>
+                          
                       </div>
                       
                     </div>

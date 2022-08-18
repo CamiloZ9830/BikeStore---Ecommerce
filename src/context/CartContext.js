@@ -17,7 +17,7 @@ export function CartProvider({children}) {
             setItems(items.map((articulo) => {
                    if (articulo.id === item.id) {
                          articulo.cantidad += quantity
-                         alert(`Agregaste ${quantity} productos a la canasta`)
+                         
                    }
                    
                   return articulo
@@ -25,7 +25,7 @@ export function CartProvider({children}) {
              
             :
             
-             setItems([{...item, cantidad: quantity}], alert(`Agregaste ${quantity} productos a la canasta`))
+             setItems([...items,{...item, cantidad: quantity}])
               
       };
 
