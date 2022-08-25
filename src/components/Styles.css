@@ -146,7 +146,8 @@ body {
 }
 
 .center-cart-div{
-    margin-top: 80px;
+    margin-top: 20px;
+    margin-bottom: 50px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;

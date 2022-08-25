@@ -1,7 +1,7 @@
 import '../Styles.css';
 import ItemDetail from './ItemDetail'
 import React, {useState, useEffect} from 'react';
-import { getItems } from '../../helpers/helpers';
+import { getItems } from '../../helpers/getItems';
 import {useParams} from 'react-router-dom'
 import FadeLoader from "react-spinners/FadeLoader";
 
@@ -14,13 +14,13 @@ const override = {
 function ItemDetailContainer() {
     const {Id} = useParams();
     const [details, setDetails] = useState([]);
-    const [loader, setLoader] = useState(false)
+    const [loader, setLoader] = useState(false);
      
     useEffect(() => {
-      setLoader(true)
+      setLoader(true);
       getItems(Id).then(
-        (Item) => {
-          setLoader(false)
+        Item => {
+          setLoader(false);
           setDetails(Item);
         });
     },[Id]);

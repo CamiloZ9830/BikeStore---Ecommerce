@@ -8,12 +8,11 @@ import {Link} from 'react-router-dom'
 function CartItemContainer() {
      const {items, removeItem, removeAll} = useContext(CartContext);
      
-    const valorTotalItem = items.map((articulo) => {
+    const valorTotal = items.map((articulo) => {
       const {cantidad, precio} = articulo;
       return precio * cantidad
        
-     })
-     const valorTotal = valorTotalItem.reduce((value1, value2) => value1 + value2, 0 )
+     }).reduce((value1, value2) => value1 + value2, 0 )
       console.log(items);
      return (
       <>  
@@ -30,8 +29,9 @@ function CartItemContainer() {
          {items.map((item) => {
 
             const {nombre, descripcion, modelo, precio, img, id, cantidad} = item;
-                 
+            
          return (
+           
             <div className="item"  key={id}>
                     <i style={{background: 'red', color:'white', borderRadius: '5px'}} className="bi bi-x" onClick={() => removeItem(id)}></i>
                     <img src={img} alt="Producto"/>
@@ -40,9 +40,9 @@ function CartItemContainer() {
                        <p>{descripcion}</p>
                        <p><b>Modelo:</b>{modelo}</p>
                        <p><b>Cantidad:</b>{cantidad}</p>
-                       <p><b>x</b>{cantidad * precio}</p>
+                       <p><b>x $</b>{precio}</p>
                       <div className="precio-cantidad">
-                          <h3>${precio}</h3>
+                          <h3>$ {precio * cantidad}</h3>
                           
                       </div>
                       
