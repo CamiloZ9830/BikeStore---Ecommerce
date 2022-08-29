@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom'
 
 
 
-function Item ({nombre, precio, img,id,categoria}) {
+function Item ({nombre, precio, img,id}) {
       
       return ( <Link style={{textDecoration: 'none'}} 
                  to={`/item/${id}`}>

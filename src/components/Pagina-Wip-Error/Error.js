@@ -8,7 +8,7 @@ function Error () {
          <section>
             <h2>Error: Pagina no encontrada</h2>
             <br/>
-            <button className="btn btn-outline-primary"><Link to='/'>Volver a la pagina principal</Link></button>
+            <button className="btn "><Link to='/'>Volver a la pagina principal</Link></button>
          </section>
     );
 };

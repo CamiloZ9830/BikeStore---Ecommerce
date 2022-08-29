@@ -4,24 +4,21 @@ import {getDocs,getDoc, collection,doc,where,query} from 'firebase/firestore'
 
 
 export const getItems = (itemId) =>{
-
-       
-       console.log(itemId)
      
   
     return  new Promise((resolve) => {
         const productosRef = collection(firestoreDB,'productosFS');
 
        if (itemId && /[0-9]/.test(itemId)) {
-        console.log(itemId)
+        
         const docRef = doc(productosRef, itemId);
              getDoc(docRef).then(snapshot => {
                 const itemData = {...snapshot.data(), id: itemId}
                 resolve(itemData)
-                console.log(itemData)
-             })
+             });
 
        }
+       
        else if(itemId) {
        
             
@@ -33,11 +30,9 @@ export const getItems = (itemId) =>{
               
                 resolve(queryData);
            
-                console.log(queryData)
-            })
-          
-
-       }
+                
+            });
+          }
             
        else  {
         getDocs(productosRef).then(snapshot => {
@@ -47,10 +42,10 @@ export const getItems = (itemId) =>{
                
                 resolve(docsData)
                 
-                console.log(docsData);
+                
                 
                
-               })
+               });
        }
                 
        

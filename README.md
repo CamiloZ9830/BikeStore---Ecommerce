@@ -2,11 +2,11 @@
 
 Esta es una Ecommerce ReactApp de pagina unica.
 
-BikeStore es una tienda de bicicletas con una direccion fisica que aspira a ofrecer sus productos de forma online a traves de la app en desarrollo BikeStore. 
+BikeStore es una tienda de bicicletas que ofrece productos de forma online a traves de la app en desarrollo BikeStore. 
 
 # Librerias Externa 
 
-Librerias Externas como Bootstrap para estilos del NavBar y ItemCount, tambien uso de ReactSpinners que se renderiza cuando el async mock no esta listo, y simulan la carga de los datos.
+Librerias Externas como Bootstrap para estilos del NavBar y ItemCount, tambien uso de ReactSpinners que se renderiza mientras cargan los productos.
 
 # Getting Started with Create React App
 

@@ -26,7 +26,7 @@ export function CartProvider({children}) {
              
             :
             
-             setItems([...items,{...item, cantidad: quantity}])
+             setItems([...items,{...item, cantidad: quantity}]);
               
       };
 
@@ -40,8 +40,17 @@ export function CartProvider({children}) {
             setItems([]);
       };
 
-         return (
-            <CartContext.Provider value={{items, addItem, removeItem, removeAll}}>
+     
+       const valorTotal = items.map((articulo) => {
+                  const {cantidad, precio} = articulo;
+                  return precio * cantidad})
+                  .reduce((value1, value2) => value1 + value2, 0 );
+      
+      
+      const cantidadTotal = items.map((articulo) =>  articulo.cantidad).reduce((value1, value2) => value1 + value2, 0);
+      
+      return (
+            <CartContext.Provider value={{items, valorTotal, cantidadTotal, addItem, removeItem, removeAll}}>
                   {children}
             </CartContext.Provider>
          )

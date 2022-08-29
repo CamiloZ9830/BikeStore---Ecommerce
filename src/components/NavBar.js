@@ -7,19 +7,21 @@ function NavBar() {
 return (
      <>
     <div className="navbar">
+    
        <Link to='/'><h2>Bike Store</h2></Link>
          <div className = 'paginas'> 
-              <div><NavLink style={({isActive}) => 
-                isActive ? {color: 'purple'} : {color:'white'}} to={'/category/Equipo-Repuestos'} className="links_Pag">Equipo y Repuestos</NavLink></div>
-              <div><NavLink style={({isActive}) => 
-                isActive ? {color: 'purple'} : {color:'white'}} to={'/category/Ruta'} className="links_Pag">Bicicletas</NavLink></div>
-              <div><NavLink style={({isActive}) => 
-                isActive ? {color: 'purple'} : {color:'white'}} to={'/category/Electricas'} className="links_Pag">Electra Bikes</NavLink></div>
-              <div><Link  to='Wip' className="links_Pag" >Tienda Oficial</Link></div>
+              <div className="links_Pag"><NavLink style={({isActive}) => 
+                isActive ? {color: 'purple'} : {color:'white'}} to={'/category/Equipo-Repuestos'}>Equipo y Repuestos</NavLink></div>
+              <div className="links_Pag"><NavLink style={({isActive}) => 
+                isActive ? {color: 'purple'} : {color:'white'}} to={'/category/Ruta'}>Bicicletas</NavLink></div>
+              <div className="links_Pag"><NavLink style={({isActive}) => 
+                isActive ? {color: 'purple'} : {color:'white'}} to={'/category/Electricas'} >Electra Bikes</NavLink></div>
+              <div className="links_Pag"><Link  to='Wip'  >Tienda Oficial</Link></div>
          </div>
          < CartWidget/>
          
     </div>
+   
     <Outlet/>
     </>
 )

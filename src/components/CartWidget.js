@@ -5,21 +5,20 @@ import { CartContext } from '../context/cartContext';
 
 function CartWidget() {
      
-    const {items} = useContext(CartContext)
-     let cantidadTotal = items.map((articulo) =>  articulo.cantidad).reduce((value1, value2) => value1 + value2, 0)
+    const {cantidadTotal} = useContext(CartContext)
+     
      
     
     return(
-<Link to='/cart'>
-       <div className="carrito">
-        <i className="bi bi-cart3"></i> 
-        {cantidadTotal >= 1 ?
-        <div  className="cantidad_Prod">{cantidadTotal}</div> 
-        :
-        null
-        }
-        
-       </div></Link>
+        <Link to='/cart'>
+            <div className="carrito">
+                 <i className="bi bi-cart3"></i> 
+                  {cantidadTotal >= 1 ?
+              <div  className="cantidad_Prod">{cantidadTotal}</div> 
+               :
+                 null
+               }
+            </div></Link>
    
    )
 }

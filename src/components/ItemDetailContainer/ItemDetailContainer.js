@@ -4,6 +4,8 @@ import React, {useState, useEffect} from 'react';
 import { getItems } from '../../helpers/getItems';
 import {useParams} from 'react-router-dom'
 import FadeLoader from "react-spinners/FadeLoader";
+import { ToastContainer} from 'react-toastify';
+
 
 const override = {
   display: "block",
@@ -37,7 +39,7 @@ function ItemDetailContainer() {
               
                 : 
                  
-                 <ItemDetail details={details}/>}
+               <><ItemDetail details={details}/> <ToastContainer/></>}
                 </>
 );
 };

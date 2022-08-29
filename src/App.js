@@ -7,27 +7,35 @@ import Wip from './components/Pagina-Wip-Error/Wip'
 import { CartProvider } from './context/cartContext';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import CartItemContainer from './components/CartItemContainer/CartItemContainer';
-
+import Validation from './components/CartItemContainer/ValidationForm/Validacion';
+import Footer from './components/Footer/Footer';
 
 function App() {
   
   return (
-    <CartProvider>
+   
       
       <BrowserRouter>
-       <Routes>
-        <Route path='/' element={<NavBar/>}>
-           <Route index element={<ItemListContainer/>}/>
-           <Route path='/category/:categoryId' element={ <ItemListContainer/>}/>
-           <Route path='/item/:Id' element={<ItemDetailContainer/>}/>
-           <Route path='/cart' element={<CartItemContainer/>}></Route>
-        </Route>
-           <Route path='Wip' element={<Wip/>}/>
-           <Route path='*' element={<Error/>}/>
-      </Routes>
+       <CartProvider>
+        <Routes>
+          
+          <Route path='/' element={<><NavBar/><Footer/></>}>
+                  <Route index element={<ItemListContainer/>}/>
+                  <Route path='/category/:categoryId' element={<ItemListContainer/>}/>
+                  <Route path='/item/:Id' element={<><ItemDetailContainer/> </>}/>
+                  <Route path='/cart' element={<CartItemContainer/>}></Route>
+                  <Route path='/checkout' element={<Validation/>}></Route>
+             </Route>
+         
+                   <Route path='Wip' element={<Wip/>}/>
+                   <Route path='*' element={<Error/>}/>
+
+        </Routes>
+       </CartProvider>
+        
     </BrowserRouter>
     
-    </CartProvider>
+    
     
   )
 }
