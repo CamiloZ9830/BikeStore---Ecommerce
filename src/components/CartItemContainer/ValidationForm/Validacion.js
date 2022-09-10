@@ -15,7 +15,7 @@ function Validation() {
   
    
     const handleOnChange = (e) => {
-             
+          
             dispatch({
                type: ACTIONS.FORMDATA,
                payload: {key: e.target.name, value: e.target.value},
