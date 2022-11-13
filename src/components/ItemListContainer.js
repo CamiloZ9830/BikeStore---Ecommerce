@@ -8,6 +8,7 @@ import FadeLoader from "react-spinners/FadeLoader";
 
   
  function ItemListContainer() {
+  
    
    const {categoryId} = useParams(); 
   const [productos, setProductos] = useState([]);
@@ -27,6 +28,7 @@ import FadeLoader from "react-spinners/FadeLoader";
  
 
     return (
+      
       <div className='flexContent'> 
       {loader  ? 
          <FadeLoader
@@ -36,10 +38,17 @@ import FadeLoader from "react-spinners/FadeLoader";
         
       
       : 
+         
+         
          <ItemList productos={productos}/> 
-      }
+         
+        }
       
       </div>
+       
+      
+      
+        
     );
      
   
