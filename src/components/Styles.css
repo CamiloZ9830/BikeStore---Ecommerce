@@ -7,7 +7,10 @@ body {
 
 
 }
-   
+input:focus {
+    box-shadow:  0 0 10px 1800px rgba(0, 0, 0, 0.08);
+}
+
 
 .navbar {
     display: flex;
@@ -158,6 +161,7 @@ body {
 .search:focus {
 
     border-radius: 2px;
+
     
 }
 
@@ -180,9 +184,7 @@ body {
 .price{
    gap: 10px;
 }
-span {
-    padding-bottom: 50px;
-}
+
 
 .flexContent {
     min-height: calc(100vh - 70px);

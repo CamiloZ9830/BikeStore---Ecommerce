@@ -1,6 +1,7 @@
 import './Styles.css';
 import CartWidget from './CartWidget';
 import {Link,NavLink,Outlet} from 'react-router-dom';
+import LoginWidget from './LoginComponent/LoginWidget';
 
 
 function NavBar() {
@@ -18,7 +19,8 @@ return (
                 isActive ? {color: 'purple'} : {color:'white'}} to={'/category/Electricas'} >Electra Bikes</NavLink></div>
               <div className="links_Pag"><Link  to='Wip'  >Tienda Oficial</Link></div>
          </div>
-         < CartWidget/>
+         <LoginWidget/>
+         <CartWidget/>
          
     </div>
    

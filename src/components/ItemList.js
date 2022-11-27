@@ -17,7 +17,7 @@ function ItemList ({productos}) {
    
    const [buscar, setBuscar] = useState("")
    
-  
+
 
 const handleFilter = (search) => {
    setBuscar(search)
@@ -47,7 +47,7 @@ const handlePriceFilter = (priceFilter) => {
         <div className='grid-content'>
             <div className='filter-flex'>
              <SearchBar filter={handleFilter}/>
-             <PriceFilter productos={filter} handle={handlePriceFilter}/>
+             <PriceFilter productos={productos} handle={handlePriceFilter}/>
             </div> 
        
         <div className="shop">

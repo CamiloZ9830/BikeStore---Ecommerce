@@ -9,6 +9,8 @@ import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import CartItemContainer from './components/CartItemContainer/CartItemContainer';
 import Validation from './components/CartItemContainer/ValidationForm/Validacion';
 import Footer from './components/Footer/Footer';
+import Login from './components/LoginComponent/Login';
+import Register from './components/LoginComponent/Register';
 
 
 function App() {
@@ -22,6 +24,8 @@ function App() {
           
           <Route path='/' element={<><NavBar/><Footer/></>}>
                   <Route index element={<ItemListContainer/>}/>
+                  <Route path='/login' element={<Login/>}/>
+                  <Route path='/register' element={<Register/>}/>
                   <Route path='/category/:categoryId' element={<ItemListContainer/>}/>
                   <Route path='/item/:Id' element={<><ItemDetailContainer/> </>}/>
                   <Route path='/cart' element={<CartItemContainer/>}></Route>
